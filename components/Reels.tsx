@@ -41,7 +41,7 @@ const Reels = ({ src, title, subtitle }: Props) => {
 
   function handleCopied() {
     setCopied(true);
-    let timer = setTimeout(() => {
+    setTimeout(() => {
       setCopied(false);
     }, 2000);
   }
