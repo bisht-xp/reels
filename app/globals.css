@@ -2,20 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.scroll-props {
+  scrollbar-width: auto;
+  scrollbar-color: default;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.scroll-props::-webkit-scrollbar {
+  width: auto;
+}
+
+.scroll-props::-webkit-scrollbar-track {
+  background-color: #ECEEF0
+}
+
+
+@media screen and (max-width: 640px) {
+  .scroll-props {
+    scrollbar-width: none;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
